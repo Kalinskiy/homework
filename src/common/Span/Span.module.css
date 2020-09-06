@@ -1,0 +1,14 @@
+import React from 'react';
+
+
+function Span(props:any) {
+    return (
+        <>
+            <span>{props.increment}</span>
+        </>
+    )
+
+}
+
+
+export default Span
