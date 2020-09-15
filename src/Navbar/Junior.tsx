@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './Navbar.module.css';
-import {HashRouter, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 const Junior = () => {
     return (
         <nav className={s.nav}>
-            <div className={s.item}>JUNIOR:</div>
+
             <div className={s.item}>
                 <NavLink to='/homework6' activeClassName={s.activeLink}>home-work6</NavLink>
             </div>

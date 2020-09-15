@@ -9,7 +9,6 @@ const PreJunior = () => {
     return (
 
         <nav className={s.nav}>
-            <span className={'title'}>PREJUNIOR:</span>
             <div className={s.item}>
                 <NavLink to='/homework1' activeClassName={s.activeLink}>home-work1,2</NavLink>
             </div>

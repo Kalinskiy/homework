@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 const JuniorPlus = () => {
     return (
         <nav className={s.nav}>
-            <span className={'title'}>JUNIOR+:</span>
+
             <div className={s.item}>
                 <NavLink to='/homework11' activeClassName={s.activeLink}>home-work11</NavLink>
             </div>

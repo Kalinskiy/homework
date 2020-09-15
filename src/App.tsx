@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {HashRouter, Route} from "react-router-dom";
 import PreJunior from "./Navbar/PreJunior";
@@ -21,17 +21,27 @@ import HomeWork13 from "./HomeWork13/HomeWork13";
 
 function App() {
 
+    const [trigger, setTrigger] = useState<null | string>(null)
+    const changeLinks = (value:string)=> {
+
+        setTrigger(value)
+    }
 
 
     return (
 
         <div className={'App'}>
             <HashRouter>
+
                 <Header/>
-                {/*<Navbar/>*/}
-                <Route path='/prejunior' render={() => <PreJunior/>}/>
-                <Route path='/junior' render={() =>  <Junior/>}/>
-                <Route path='/juniorplus' render={() =>   <JuniorPlus/>}/>
+                <Navbar trigger={trigger}
+                        changeLinks={changeLinks}/>
+
+
+                {trigger === 'preJun' ? <PreJunior/> : null}
+                {trigger === 'junior' ? <Junior/> : null}
+                {trigger === 'juniorplus' ? <JuniorPlus/> : null}
+
 
                 <Route path='/homework1' render={() => <HomeWork1/>}/>
                 <Route path='/homework3' render={() => <HomeWork3/>}/>

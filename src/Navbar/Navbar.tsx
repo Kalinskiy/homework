@@ -1,9 +1,8 @@
 import React from 'react';
 import s from './Navbar.module.css';
-import {HashRouter, NavLink} from "react-router-dom";
 
 
-const Navbar = (props:any) => {
+const Navbar = (props: any) => {
 
     const preJun = 'preJun'
     const junior = 'junior'
@@ -22,18 +21,12 @@ const Navbar = (props:any) => {
     return (
         <nav className={s.nav}>
             <div className={s.items}>
-                <div onClick={onclickHandlerPreJunior} className={s.titleNameBar}>
-                    {/*<NavLink  to='/prejunior' activeClassName={s.activeLink}>Pre-junior</NavLink>*/}Pre-junior
+                <div onClick={onclickHandlerPreJunior} className={s.titleNameBar}>Pre-junior</div>
+                <div className={s.item}>
+                    <div onClick={onclickHandlerJunior} className={s.titleNameBar}>Junior</div>
                 </div>
                 <div className={s.item}>
-                    <div onClick={onclickHandlerJunior} className={s.titleNameBar}>
-                        {/*<NavLink  to='/prejunior' activeClassName={s.activeLink}>Pre-junior</NavLink>*/} Junior
-                    </div>
-                </div>
-                <div className={s.item}>
-                    <div onClick={onclickHandlerJuniorPlus} className={s.titleNameBar}>
-                        {/*<NavLink  to='/prejunior' activeClassName={s.activeLink}>Pre-junior</NavLink>*/} JuniorPlus
-                    </div>
+                    <div onClick={onclickHandlerJuniorPlus} className={s.titleNameBar}>JuniorPlus</div>
                 </div>
             </div>
 

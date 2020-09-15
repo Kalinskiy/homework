@@ -1,9 +1,8 @@
 .nav {
     padding: 20px;
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*align-items: center;*/
     width: 100%;
+    justify-content: space-around;
+    display: flex;
 
 
 }
@@ -11,27 +10,35 @@
 .items {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
-.item{
+.item {
     margin-right: 20px;
 
+    color:white;
 }
-.titleNameBar{
 
+.titleNameBar {
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+
+}
+.titleNameBar:hover {
+   border-bottom: 3px solid white;
+   font-size: 1.4em;
 
 }
 
 .item a {
-    color: #010c10;
+    color: #c1dff1;
     font-size: 20px;
     text-decoration: none;
-
 }
 
 .item a.activeLink {
     color: #0f1e3d;
-
 }
 
 .item a:hover {
@@ -40,10 +47,4 @@
     cursor: pointer;
     transition: width 2s, background-color 1s, height 4s; /* плаыный переход*/
 }
-.workItem{
 
-}
-
-.homeworks {
-    width: 25%;
-}
