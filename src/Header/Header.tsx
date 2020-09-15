@@ -11,7 +11,7 @@ const Header = ()=>{
 
     const changeLinks = (value:string)=> {
 
-        setTrigger(value)
+        setTrigger(value) //1
     }
 
     return <div className={s.header}>
