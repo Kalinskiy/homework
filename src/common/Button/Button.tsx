@@ -1,21 +1,18 @@
 import React from 'react';
+import './Button.module.css';
+
+type propsType={
+    buttonName:string
+    click:()=>void
+}
+function Button(props:propsType) {
 
 
-function Button(props:any) {
 
 
-//props.incrementFunction
     return (
         <>
-            <button  onClick={
-                ()=>{
-                alert('Привет ' + props.value)
-                props.setValue('')}
-
-            }
-            >
-               Click
-            </button>
+            <button onClick={props.click}>{props.buttonName}</button>
         </>
     )
 

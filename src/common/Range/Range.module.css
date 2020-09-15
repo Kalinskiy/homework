@@ -1,0 +1,46 @@
+
+.container {
+
+}
+
+.slider {
+    width: 30vw;
+    border-radius: 5px;
+    height: 10px;
+    -webkit-appearance: none;
+
+    background: #5b3ba0; /* Old browsers */
+    background: -moz-linear-gradient(left, #5b3ba0 0%, #2b88d9 42%, #f2f2f2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #5b3ba0 0%,#2b88d9 42%,#f2f2f2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #5b3ba0 0%,#2b88d9 42%,#f2f2f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    color: red;
+    border: none;
+
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 0.1em solid black;
+    border-radius: 50%;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transition: background-color .6s;
+    background-color: #bdaef6;
+}
+
+.slider:hover {
+    cursor: pointer;
+    border: none;
+    background-color: #abb6db;
+}
+
+.slider:focus {
+
+    outline: none;
+
+}

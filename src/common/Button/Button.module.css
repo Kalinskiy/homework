@@ -1,0 +1,17 @@
+button{
+    background-color: rgba(224, 227, 227, 0.57);
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-family: "Comic Sans MS", sans-serif;
+    border:1px solid black;
+    opacity: .8;
+    color: #343434;
+}
+
+
+button:hover{
+    background-color: rgba(154, 160, 160, 0.57);
+    border-bottom:1px solid black;
+    color: #000000;
+    cursor: pointer;
+}

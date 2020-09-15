@@ -1,10 +1,16 @@
 import React from 'react';
 
-
-function Span(props:any) {
+export type PropsType={
+    spanDisplay?:number | string
+    name?:string
+    toggleMode?:()=>void
+    value?:string
+    changeEditMode:()=>void
+}
+function Span(props:PropsType) {
     return (
         <>
-            <span>{props.incr}</span>
+            <span onDoubleClick={props.changeEditMode}>{props.spanDisplay}{props.value}</span>
         </>
     )
 

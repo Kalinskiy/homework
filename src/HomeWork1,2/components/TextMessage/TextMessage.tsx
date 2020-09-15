@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './MessageDisplay.module.css'
+import s from './TextMessage.module.css'
 
 
 type propsType = {

@@ -1,11 +1,10 @@
 .general {
     display: flex;
-    justify-content: flex-end;
-    height: 60px;
-
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 
 }
-
 
 .image {
     width: 50px;
@@ -19,7 +18,7 @@
 
 .messageBlock {
     width: 300px;
-    height: 50px;
+    height: 4em;
     background-color: gray;
     border-radius: 10px;
     opacity: .8;

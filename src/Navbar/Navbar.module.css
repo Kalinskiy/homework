@@ -1,0 +1,49 @@
+.nav {
+    padding: 20px;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
+    width: 100%;
+
+
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item{
+    margin-right: 20px;
+
+}
+.titleNameBar{
+
+
+}
+
+.item a {
+    color: #010c10;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.item a.activeLink {
+    color: #0f1e3d;
+
+}
+
+.item a:hover {
+    background-color: #4682B4;
+    color: white;
+    cursor: pointer;
+    transition: width 2s, background-color 1s, height 4s; /* плаыный переход*/
+}
+.workItem{
+
+}
+
+.homeworks {
+    width: 25%;
+}
