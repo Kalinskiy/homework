@@ -1,6 +1,7 @@
 import React, {useCallback, useState} from "react";
-import s from './HomeWork11.module.css'
 import Range from "../common/Range/Range";
+import Span from "../common/Span/Span";
+import container from '../common/styles/container/container.module.css'
 
 
 const HomeWork11 = React.memo(() => {
@@ -12,8 +13,8 @@ const HomeWork11 = React.memo(() => {
     }, [])
 
     return (
-        <div className={s.general}>
-            <span className={s.box}>{value}</span>
+        <div className={container.container}>
+            <Span  value={value}/>
             <Range minValue={minValue} maxValue={maxValue} value={value} onChange={onChange}/>
 
         </div>

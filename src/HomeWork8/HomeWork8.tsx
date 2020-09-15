@@ -1,11 +1,10 @@
 import React, {useReducer} from "react";
-import {checkAC, hwReducer,sortUp, sortDown} from "./homeWorkReducer";
+import {checkAC, hwReducer, sortUp, sortDown} from "./homeWorkReducer";
 import s from './HomeWork8.module.css'
+import Button from "../common/Button/Button";
 
 
-export type StartStateType = {
-   state: Array<Person>
-}
+
 export type Person = {
     id: string
     name: string
@@ -48,9 +47,10 @@ export const HomeWork8 = () => {
                 )
             })}
             <div className={s.buttons}>
-                <button className={s.button} onClick={sortUpFunc}>Sort-UP</button>
-                <button className={s.button} onClick={sortDownFunc}>Sort-DOWN</button>
-                <button className={s.button} onClick={check}>Check</button>
+
+                <Button buttonName={'Check'} click={check}/>
+                <Button buttonName={'Sort-DOWN'} click={sortDownFunc}/>
+                <Button buttonName={'Sort-UP'} click={sortUpFunc}/>
             </div>
 
         </div>

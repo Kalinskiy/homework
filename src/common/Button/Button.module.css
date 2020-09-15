@@ -1,8 +1,7 @@
-button{
+.button{
     background-color: rgba(224, 227, 227, 0.57);
     border-radius: 5px;
     font-size: 1.1em;
-    font-family: "Comic Sans MS", sans-serif;
     border:1px solid black;
     opacity: .8;
     color: #343434;

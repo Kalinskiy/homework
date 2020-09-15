@@ -4,12 +4,11 @@ import {HashRouter, Route} from "react-router-dom";
 import PreJunior from "./Navbar/PreJunior";
 import Junior from "./Navbar/Junior";
 import JuniorPlus from "./Navbar/JuniorPlus";
-import Header from "./Header/Header";
 import Navbar from "./Navbar/Navbar";
 import HomeWork7 from "./HomeWork7/HomeWork7";
 import HomeWork1 from "./HomeWork1,2/HomeWork1,2/HomeWork";
 import HomeWork3 from "./HomeWork3/HomeWork3";
-import {HomeWork6} from "./HomeWork6/HomeWork6";
+import HomeWork6 from "./HomeWork6/HomeWork6";
 import HomeWork4 from "./HomeWork4/HomeWork4";
 import HomeWork8 from './HomeWork8/HomeWork8';
 import HomeWork9 from "./HomeWork9/HomeWork9";
@@ -32,8 +31,6 @@ function App() {
 
         <div className={'App'}>
             <HashRouter>
-
-                <Header/>
                 <Navbar trigger={trigger}
                         changeLinks={changeLinks}/>
 

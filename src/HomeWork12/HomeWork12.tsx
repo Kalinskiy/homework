@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import s from './HomeWork12.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../redux/store";
 import {changeModeAC} from "../redux/theme-reducer";
+import Span from "../common/Span/Span";
+import container from '../common/styles/container/container.module.css'
 
 
 const HomeWork12 = () => {
@@ -34,7 +36,7 @@ const HomeWork12 = () => {
 
         <div className={darkMode ? s.dark : ''}>
             <div className={s.toggleContainer}>
-                <span style={{color: darkMode ? 'grey' : 'yellow'}}>☼️</span>
+                <Span style={{color: darkMode ? 'grey' : 'yellow'}} value={'☼'}/>️
                 <span className={s.toggle}>
                     <input
 
@@ -45,8 +47,9 @@ const HomeWork12 = () => {
                         id={s.checkbox}
                     />
                     <label htmlFor={s.checkbox}></label>
+                      <Span style={{color: darkMode ? 'yellow' : 'grey'}} value={'☽'}/>
               </span>
-                <span style={{color: darkMode ? 'yellow' : 'grey'}}>☽</span>
+
             </div>
         </div>
     </div>

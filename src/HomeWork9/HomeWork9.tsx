@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import s from './HomeWork9.module.css'
+import Button from "../common/Button/Button";
+import container from '../common/styles/container/container.module.css'
 
 
   const HomeWork9 = () => {
@@ -15,12 +17,12 @@ import s from './HomeWork9.module.css'
     const onClickStopTime = () => clearInterval(timerId)
 
     return (
-        <div className={s.general}>
+        <div className={container.container}>
             <div>
                 {date.toString()}
             </div>
-            <button title={"REFRESH"}   onClick={onClickStartTime}>REFRESH</button>
-            <button title={"STOP"}   onClick={onClickStopTime}>STOP</button>
+            <Button buttonName={"REFRESH"}   click={onClickStartTime}/>
+            <Button buttonName={"STOP"}   click={onClickStopTime}/>
         </div>
     )
 }

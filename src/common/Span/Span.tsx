@@ -5,12 +5,14 @@ export type PropsType={
     name?:string
     toggleMode?:()=>void
     value?:string
-    changeEditMode:()=>void
+    onDoubleClick?:()=>void
+    style?:any
+    className?:any
 }
 function Span(props:PropsType) {
     return (
         <>
-            <span onDoubleClick={props.changeEditMode}>{props.spanDisplay}{props.value}</span>
+            <span className={props.className} style={props.style} onDoubleClick={props.onDoubleClick}>{props.spanDisplay}{props.value}</span>
         </>
     )
 

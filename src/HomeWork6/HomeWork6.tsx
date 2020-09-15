@@ -1,13 +1,14 @@
 import React, {ChangeEvent, useState} from 'react';
 import EditableSpan from "../common/EditableSpan/EditableSpan";
 import Button from "../common/Button/Button";
-import s from './HomeWork6.module.css'
+import container from '../common/styles/container/container.module.css'
+
 
 type StateType = {
     x: string
 }
 
-export const HomeWork6 = (props: any) => {
+ const HomeWork6 = (props: any) => {
 
     const [value, setValue] = useState("transformed!")
     let [editMode, setEditMode] = useState(true);
@@ -48,14 +49,8 @@ export const HomeWork6 = (props: any) => {
         let state: StateType = getState('test', {x: 'default'})
         setValue(state.x)
     }
-    // const onKeyPressHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    //     if (e.charCode === 13) {
-    //         alertGreetingClick();
-    //     }
-    // }
 
-
-    return (<div className={s.general}>
+    return (<div className={container.container}>
         <EditableSpan value={value}
                       onChange={onChange}
                       editMode={editMode}
@@ -70,3 +65,4 @@ export const HomeWork6 = (props: any) => {
 
 }
 
+export default HomeWork6

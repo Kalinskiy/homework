@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.module.css';
+import  s from './Button.module.css';
 
 type propsType={
     buttonName:string
@@ -7,12 +7,9 @@ type propsType={
 }
 function Button(props:propsType) {
 
-
-
-
     return (
         <>
-            <button onClick={props.click}>{props.buttonName}</button>
+            <button  className={s.button} onClick={props.click}>{props.buttonName}</button>
         </>
     )
 

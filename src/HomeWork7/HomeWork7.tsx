@@ -1,7 +1,7 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {useState} from "react";
 import Select from "../common/Select/Select";
-import s from './HomeWork7.module.css'
 import Radio from "../common/Radio/Radio";
+import container from '../common/styles/container/container.module.css'
 
 
 export type SelectItem = {
@@ -38,7 +38,7 @@ const HomeWork7 = () => {
 
     }
 
-    return <div className={s.general}>
+    return <div className={container.container}>
 
         <Select items={items} onChange={onChange} value={items.find(i => i.selected) as SelectItem}/>
         <div>

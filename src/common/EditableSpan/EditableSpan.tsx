@@ -1,7 +1,6 @@
-import React, {ChangeEvent, useState} from "react";
-import Span from "../Span/Span";
-import s from "../../HomeWork6/HomeWork6.module.css";
+import React, {ChangeEvent} from "react";
 import Input from "../Input/Input";
+import Span from "../Span/Span";
 
 
 type propsType = {
@@ -10,37 +9,21 @@ type propsType = {
     onKeyPressHandler?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     changeEditMode?: () => void
     editMode?: boolean
-    onBlur:any
+    onBlur?: any
 
 }
 const EditableSpan = (props: propsType) => {
 
 
-    // const toggleMode = () => {
-    //     setEditMode(!value)
-    //
-    //
-    // }
-
-
-    // const alertGreetingClick = () => {
-    //     alert('Привет ' + value)
-    //     setValue("")
-    // }
-    // const onKeyPressHandler = (e: KeyboardEvent) => {
-    //     if (e.charCode === 13) {
-    //         alertGreetingClick();
-    //     }
-    // }
-
-
-    return (<div className={s.general}>
+    return (<div>
             {
                 props.editMode
-                    ? <span
+                    ? <Span
                         onDoubleClick={props.changeEditMode}
-                    >{props.value}</span>
+                        value={props.value}
+                    />
                     : <Input
+
                         onChange={props.onChange}
                         value={props.value}
                         onKeyPressHandler={props.onKeyPressHandler}

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import s from './HomeWork13.module.css'
 import Button from "../common/Button/Button";
 import {homeWorkAPI} from "./api";
+import container from '../common/styles/container/container.module.css'
 
 
 
@@ -21,7 +21,7 @@ const HomeWork13 = () => {
     }
 
     return (
-        <div className={s.general}>
+        <div className={container.container}>
 
             <Button buttonName={'click'} click={onClick}/>
             <input type="checkbox" checked={checkbox} onChange={() => {setCheckbox(!checkbox)}}/>

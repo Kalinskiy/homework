@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Span from "../common/Span/Span";
 import Button from "../common/Button/Button";
 import Input from "../common/Input/Input";
-import s from './HomeWork4.module.css'
+import container from '../common/styles/container/container.module.css'
 
 
 const HomeWork4 = () => {
@@ -38,8 +38,8 @@ const HomeWork4 = () => {
     }
 
     return (
-        <div className={s.general}>
-            <Span spanDisplay={spanDisplay} changeEditMode={()=>{}}/>
+        <div className={container.container}>
+            <Span spanDisplay={spanDisplay} onDoubleClick={()=>{}}/>
             <Input onChange={onChange} value={value}  onKeyPressHandler={onKeyPressHandler} onBlur={()=>{}} error={false} toggleMode={()=>{}}/>
             <Button  buttonName={'Alert'} click={alertGreetingClick}/>
             <Button  buttonName={'Incr'} click={incrementFunction} />

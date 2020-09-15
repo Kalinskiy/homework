@@ -21,12 +21,12 @@ const Navbar = (props: any) => {
     return (
         <nav className={s.nav}>
             <div className={s.items}>
-                <div onClick={onclickHandlerPreJunior} className={s.titleNameBar}>Pre-junior</div>
+                <div onClick={onclickHandlerPreJunior} className={s.titleNameBar}  onDoubleClick={()=>{props.changeLinks(null)}}>Pre-junior</div>
                 <div className={s.item}>
-                    <div onClick={onclickHandlerJunior} className={s.titleNameBar}>Junior</div>
+                    <div onClick={onclickHandlerJunior} className={s.titleNameBar} onDoubleClick={()=>{props.changeLinks(null)}}>Junior</div>
                 </div>
                 <div className={s.item}>
-                    <div onClick={onclickHandlerJuniorPlus} className={s.titleNameBar}>JuniorPlus</div>
+                    <div onClick={onclickHandlerJuniorPlus} className={s.titleNameBar} onDoubleClick={()=>{props.changeLinks(null)}}>JuniorPlus</div>
                 </div>
             </div>
 
