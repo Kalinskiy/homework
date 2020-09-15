@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import  s from './Header.module.css'
+import s from './Header.module.css'
 import Navbar from "../Navbar/Navbar";
-import {HashRouter} from "react-router-dom";
 import PreJunior from "../Navbar/PreJunior";
 import Junior from "../Navbar/Junior";
 import JuniorPlus from "../Navbar/JuniorPlus";
