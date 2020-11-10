@@ -16,12 +16,7 @@ const JuniorPlus = () => {
             <div className={s.item}>
                 <NavLink to='/homework13' activeClassName={s.activeLink}>home-work13</NavLink>
             </div>
-            <div className={s.item}>
-                <NavLink to='/homework14' activeClassName={s.activeLink}>home-work14</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to='/homework15' activeClassName={s.activeLink}>home-work15</NavLink>
-            </div>
+
 
 
 

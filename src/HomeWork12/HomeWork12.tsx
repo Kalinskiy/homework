@@ -4,21 +4,20 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../redux/store";
 import {changeModeAC} from "../redux/theme-reducer";
 import Span from "../common/Span/Span";
-import container from '../common/styles/container/container.module.css'
 
 
 const HomeWork12 = () => {
     const dispatch = useDispatch()
     const darkMode = useSelector<AppRootStateType, boolean>(state => state.theme.darkMode)
     useEffect(() => {
-        console.log( (JSON.parse(localStorage.getItem('dark') as any) ))
-        dispatch(changeModeAC( (JSON.parse(localStorage.getItem('dark') as string) || false) ) )
-        console.log( 'dark mode from ls', darkMode)
-    },[])
+        console.log((JSON.parse(localStorage.getItem('dark') as any)))
+        dispatch(changeModeAC((JSON.parse(localStorage.getItem('dark') as string) || false)))
+        console.log('dark mode from ls', darkMode)
+    }, [])
 
     useEffect(() => {
         console.log('redux', darkMode)
-        console.log( '2', JSON.parse(localStorage.getItem('dark') as any ))
+        console.log('2', JSON.parse(localStorage.getItem('dark') as any))
         localStorage.setItem('dark', JSON.stringify(darkMode))
     }, [darkMode])
 
@@ -32,12 +31,12 @@ const HomeWork12 = () => {
     }
 
 
-    return <div className={s.general}>
-
-        <div className={darkMode ? s.dark : ''}>
-            <div className={s.toggleContainer}>
-                <Span style={{color: darkMode ? 'grey' : 'yellow'}} value={'☼'}/>️
-                <span className={s.toggle}>
+    return (
+        <div className={s.general}>
+            <div className={darkMode ? s.dark : ''}>
+                <div className={s.toggleContainer}>
+                    <Span style={{color: darkMode ? 'grey' : 'yellow'}} value={'☼'}/>️
+                    <span className={s.toggle}>
                     <input
 
                         checked={darkMode}
@@ -49,10 +48,10 @@ const HomeWork12 = () => {
                     <label htmlFor={s.checkbox}></label>
                       <Span style={{color: darkMode ? 'yellow' : 'grey'}} value={'☽'}/>
               </span>
-
+                </div>
             </div>
         </div>
-    </div>
+    )
 }
 
 export default HomeWork12

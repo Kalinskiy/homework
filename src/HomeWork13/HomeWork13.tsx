@@ -4,27 +4,26 @@ import {homeWorkAPI} from "./api";
 import container from '../common/styles/container/container.module.css'
 
 
-
-
 const HomeWork13 = () => {
     let [checkbox, setCheckbox] = useState(false)
 
 
-    function onClick() {
-
-         homeWorkAPI.hw13(checkbox).then((res: any) => {
-
-        })
-            .catch((error: any) => {
-                console.log(error)
-            })
+    async function onClick() {
+        try {
+            const res = await homeWorkAPI.hw13(checkbox)
+        } catch (e) {
+            console.log(e)
+        }
     }
+
 
     return (
         <div className={container.container}>
 
             <Button buttonName={'click'} click={onClick}/>
-            <input type="checkbox" checked={checkbox} onChange={() => {setCheckbox(!checkbox)}}/>
+            <input type="checkbox" checked={checkbox} onChange={() => {
+                setCheckbox(!checkbox)
+            }}/>
 
         </div>
     )
